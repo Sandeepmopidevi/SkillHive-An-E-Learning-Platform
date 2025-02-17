@@ -1,0 +1,15 @@
+<app-header (sideMenuEvent)="sideMenuEventListener($event)"></app-header>
+<div *ngIf="candidateSideMenu">
+  <app-side-menu (closeSideMenu)="closeSideMenu($event)"></app-side-menu>
+</div>
+<div *ngIf="authsideMenu">
+  <app-sidemenu (closeSideMenu)="closeSideMenu($event)"></app-sidemenu>
+</div>
+<div *ngIf="instructorSideMenu">
+  <app-dashboard (closeSideMenu)="closeSideMenu($event)"></app-dashboard>
+</div>
+<div style="padding-top: 50px;">
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
+<!-- <app-footer></app-footer> -->
